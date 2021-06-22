@@ -7,6 +7,7 @@
     --circle-bg-color: #fff;
     --circle-fill-color: #999;
     --circle-border-color: #999;
+    --btn-disabled-color: #999;
     --btn-primary: #fff;
     --btn-hover-color: #18cb;
 }
@@ -114,4 +115,9 @@ body {
 
 .btn:hover {
     background-color: var(--btn-hover-color);
+}
+
+.btn:disabled {
+    background-color: var(--btn-disabled-color);
+    cursor: not-allowed;
 }
