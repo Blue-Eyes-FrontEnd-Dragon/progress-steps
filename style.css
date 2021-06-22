@@ -2,6 +2,8 @@
 
 :root {
     --main-bg-color: #f6f7fb;
+    --line-bg-color: #3498db;
+    --faint-line-bg-color: #e0e0e0;
 }
 
 * {
@@ -36,15 +38,38 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 2rem 32rem 2rem;
+    margin: 2rem 40rem 2rem;
     max-width: 100%;
-    width: 35rem;
+    width: 20rem;
 }
+
+.progress-container::before {
+    content: '';
+    display: inline-flex;
+    background-color: var(--faint-line-bg-color);
+    position: absolute;
+    top: 48%;
+    left: 0;
+    transform: translateY();
+    height: .4rem;
+    width: 100%;
+    z-index: -1;
+}
+
 
 .progress {
     display: inline-flex;
+    background-color: var(--line-bg-color);
+    position: absolute;
+    top: 48%;
+    left: 0;
+    transform: translateY();
+    height: .4rem;
+    width: 0%;
+    z-index: -1;
+    transition: .4s ease;
 }
 
 .circle {
-    padding: 1rem;
+    padding: 3rem;
 }
