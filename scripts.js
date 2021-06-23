@@ -34,6 +34,15 @@ function update() {
 
     progress.style.width = calculatePercentage(actives.length-1, circles.length-1) + '%';
 
+    if (currentActive === 1) {
+        prev.disabled = true;
+    } else if (currentActive === circles.length) {
+        next.disabled = true;
+    } else {
+        prev.disabled = false; 
+        next.disabled = false;
+    }
+
 }
 
 function calculatePercentage(a, b) {
